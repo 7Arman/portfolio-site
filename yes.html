@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Armandeep Singh | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    section {
+      padding: 100px 20px;
+      min-height: 100vh;
+    }
+
+    section:nth-child(odd) {
+      background: #f7f7f7;
+    }
+
+    section h2 {
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+
+    .navlinks.open {
+      display: block !important;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO / HOME SECTION -->
+  <div class="hero-header" id="home">
+    <div class="wrapper">
+      <header>
+        <div class="logo">
+          <i class="fa-solid fa-a"></i>
+          <div class="logo-text">Armandeep Singh</div>
+        </div>
+        <nav>
+          <div class="togglebtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="navlinks">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <div class="container">
+        <div class="hero-pic">
+          <img src="./arman.jpg" alt="profile pic" />
+        </div>
+        <div class="hero-text">
+          <h5>Hi I'm <span class="input">Software Engineering student</span></h5>
+          <h1>Armandeep Singh</h1>
+          <p>I’m a passionate Software Engineering student with a strong interest in web development and user experience design. I'm currently learning HTML, CSS, and JavaScript to build responsive and interactive websites. I enjoy solving problems through code and constantly seek opportunities to grow as a developer.</p>
+
+          <div class="btn-group">
+            <a href="./cv.pdf" class="btn active" download>Download CV</a>
+          </div>
+
+          <div class="social">
+            <a href="https://github.com/7Arman/7arman"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.instagram.com/arman.randhawa7"><i class="fa-brands fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- OTHER SECTIONS -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Projects will go here soon.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: 2006.armansingh@example.com</p>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+  <script>
+    const togglebtn = document.querySelector(".togglebtn");
+    const nav = document.querySelector(".navlinks");
+
+    togglebtn.addEventListener("click", function () {
+      this.classList.toggle("click");
+      nav.classList.toggle("open");
+    });
+
+    const typed = new Typed(".input", {
+      strings: ["Beginner in coding", "Potential learner"],
+      typeSpeed: 70,
+      backSpeed: 55,
+      loop: true,
+    });
+  </script>
+</body>
+</html>
+
